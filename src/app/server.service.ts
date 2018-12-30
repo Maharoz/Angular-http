@@ -12,4 +12,8 @@ storeServers(servers : any []){
      servers ,
      {headers : headers});
 }
+
+getServers(){
+    return this.http.get('https://udemy-ng-http-d2399.firebaseio.com/data.json');
+}
 }
