@@ -8,9 +8,13 @@ constructor(private http : Http){
 }
 storeServers(servers : any []){
     const headers = new Headers({'Content-Type' : 'application/json'});
-    return this.http.post('https://udemy-ng-http-d2399.firebaseio.com/data.json' ,
-     servers ,
-     {headers : headers});
+    // return this.http.post('https://udemy-ng-http-d2399.firebaseio.com/data.json' ,
+    //  servers ,
+    //  {headers : headers});
+
+    return this.http.put('https://udemy-ng-http-d2399.firebaseio.com/data.json' ,
+    servers ,
+    {headers : headers});
 }
 
 getServers(){
