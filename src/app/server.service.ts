@@ -37,4 +37,13 @@ getServers(){
         }
     );
 }
+
+getAppName(){
+    return this.http.get('https://udemy-ng-http-d2399.firebaseio.com/appName.json')
+    .map(
+        (response : Response) =>{
+            return response.json();
+        }
+    );
+}
 }
